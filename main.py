@@ -113,7 +113,7 @@ JOIN customers c ON e.employeeNumber = c.salesRepEmployeeNumber
 JOIN orders o ON c.customerNumber = o.customerNumber
 JOIN orderdetails od ON o.orderNumber = od.orderNumber
 WHERE od.productCode IN (SELECT productCode FROM few_buyers)
-ORDER BY e.lastName, e.firstName DESCz
+ORDER BY e.lastName, e.firstName DESC
 """, conn)
 
 conn.close
